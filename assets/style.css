@@ -1,0 +1,57 @@
+header {
+    width: 100%;
+    display: inline-block;
+    background-color: beige;
+}
+.headerWrap {
+    max-width: 1400px;
+    margin: auto;
+}
+header h1 {
+    float: left;
+    font-size: 2em;
+    padding: 15px;
+    color: black;
+}
+@keyframes fadeIn{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.dropdown {
+    float: right;
+    font-size: 1.5em;
+    position: relative;
+    padding: 20px 0px;
+    width: 200px;
+    text-align: center;
+    background-color: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 250ms ease-in;
+}
+.dropdown:hover {
+    background-color: lightgray;
+}
+.dropdown-content {
+    margin-top: 15px;
+    z-index: 1;
+    display: none;
+    position: absolute;
+    left: 0;
+    width: inherit;
+    background-color: none;
+}
+.dropdown-content p {
+    padding: 10px 10px;
+    color: black;
+}
+
+.dropdown-content p:hover {
+    background-color: lightgrey;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+}
