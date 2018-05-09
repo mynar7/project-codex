@@ -13,3 +13,7 @@ $('.pointer').hover(
         $(this).children('.drawerDiv').hide('blind');
     }
 );
+
+$(window).click(function() {
+    $('.drawerDiv').hide('blind');
+})

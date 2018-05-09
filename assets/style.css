@@ -48,6 +48,7 @@ section {
     position: relative;
     left: -50px;
     border: 1px solid black;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
 }
 
 section>h3 {
