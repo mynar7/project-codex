@@ -1,5 +1,9 @@
 body {
-    background: rgb(199, 232, 255);
+    background: url("https://previews.123rf.com/images/saicle/saicle1510/saicle151000144/46455238-abstract-grey-technology-background-vector-illustration.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
     height: 100vh;
     display: grid;
     font-size: 1.3em;
@@ -17,10 +21,11 @@ header {
     background-color: coral;
 }
 
-/*header>span {
-    width: 99px;
-     border-right: 1px solid black; 
-}*/
+header>span {
+    width: 200px;
+    background: #464646;
+     /* border-right: 1px solid black;  */
+}
 
 header>h2 {
     flex: 1;
