@@ -10,19 +10,57 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
+
     <header>
-        <h1><a href="./index.html">Project Codex</a></h1>
+        <span></span>
+        <h2>Project Codex</h2>
     </header>
-        <nav class="dropdown">
-            Links
-            <div class="dropdown-content">
-                <a href="#"><p>Link</p></a>
-                <a href="#"><p>Nonsense</p></a>
-                <a href="#"><p>Something longer Like this might break</p></a>                
+
+    <aside>
+        <span class="pointer" data-target='#about'>
+            About
+            <div class="drawerDiv">
+                <p class="pointer" data-target="#mission">Mission</p>
             </div>
-        </nav>
-    <aside>Other Stuff</aside>
-    <main>Content</main>
-    <footer>Copyright Lee</footer>
+        </span>
+        <span class="pointer"  data-target='#team'>
+            Team
+            <div class="drawerDiv">
+                <p>Jon</p>
+                <p>Rei</p>
+                <p>Lee</p>
+            </div>
+        </span>
+        <span class="pointer" data-target='#projects'>
+            Projects
+            <div class="drawerDiv">
+                <p>Project 1</p>
+                <p>Project 2</p>
+                <p>Project 3</p>
+            </div>
+        </span>
+    </aside>
+
+    <section class='blind' id='about'>
+        <p>ipsum text here</p>
+    </section>
+    <section class='blind' id='mission'>
+        <p><h3>Mission:</h3></p>
+        <p>Project Codex is a web design company driven by pioneering problem-solvers with backgrounds across countless industries. We exist to support businesses who have zero to limited experience with digital platforms dive into the digital space to service their customers.</p>
+    </section>
+    <section class='blind' id='team'>
+        <p>Team section</p>
+    </section>
+    <section class='blind' id='projects'>
+        <p>Projects section</p>
+    </section>
+
+    <footer>
+        <span>Copyright 2018</span>
+    </footer>
+  </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 </html>

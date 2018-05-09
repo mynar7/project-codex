@@ -1,78 +1,102 @@
 body {
+    height: 100vh;
     display: grid;
-    min-height: 100vh;
-    grid-template-rows: 50px 1fr 80px;
-    grid-template-columns: 100px 1fr 100px;
-    grid-template-areas:
-    "header header nav"
-    "aside content content"
-    "footer footer footer";
+    font-size: 1.3em;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 80px 1fr 80px;
+    grid-template-areas: 
+    "header header"
+     "aside main" 
+     "footer footer";
 }
 
 header {
     grid-area: header;
-    display: grid;
-    background-color: beige;
-    align-items: center;
+    display: flex;
 }
 
-header h1>a {
+header>span {
+    width: 99px;
+    border-right: 1px solid black;
+}
+
+header>h2 {
+    flex: 1;
     font-size: 2em;
-    color: black;
-}
-
-@keyframes fadeIn{
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-nav{
-    grid-area: nav;
-    cursor: pointer;
-}
-.dropdown {
-    display: grid;
-    background-color: beige;
-    align-content: center;
-    justify-content: center;
-    font-size: 1.5em;
-    position: relative;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-    animation: fadeIn 250ms ease-in;
-}
-.dropdown:hover {
-    background-color: lightgray;
-}
-.dropdown-content {
-    position: absolute;
-    top: 50px;
-    font-size: 0.8em;
-    z-index: 1;
-    display: none;
-}
-.dropdown-content p {
-    color: black;
-    padding: 10px 5px;
-}
-
-.dropdown-content p:hover {
-    background-color: lightgrey;
-}
-
-footer {
-    grid-area: footer;
-    display: grid;
-    justify-content: center;
-    align-content: center;
+    text-align: end;
+    margin: 0 10px;
+    border-bottom: 1px solid black;
 }
 
 aside {
     grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid black;
 }
 
-main {
-    grid-area: content;
+aside>span {
+    flex: 0.15;
+    padding: 20px 0 20px 5px;
+    margin: 20px 0;
+}
+
+section {
+    grid-area: main;
+    margin: 30px;
+    position: relative;
+    left: -50px;
+    border: 1px solid black;
+}
+
+section>h3 {
+    border-bottom: 1px solid black;
+    margin: 30px;
+}
+
+section>p {
+    margin: 30px;    
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid black;
+    text-align: center;
+}
+
+#about {
+    background: blue;
+}
+
+#team {
+    background: red;
+}
+
+#projects {
+    background: green;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.blind {
+    display: none;
+    width: 50%;
+    height: 70%;
+    margin: auto;
+}
+
+.drawerDiv {
+    display: none;
+    top: 0;
+}
+
+.drawerDiv>p {
+    border: 1px solid black;
+    padding: 10px 0;
 }
