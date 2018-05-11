@@ -148,3 +148,18 @@ footer {
         display: none;
     }
 }
+
+/*********team sec*****/
+.theImg{
+    padding-right: 10px;
+    width: 25%;
+    height: auto;
+    margin-top: -20px;
+}
+
+#jonInfo{
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    font-size: 49px;
+}
