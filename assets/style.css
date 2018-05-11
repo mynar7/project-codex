@@ -1,23 +1,31 @@
 body {
-    height: 100vh;
+    background-image: url('./images/sunset.jpg');    
+    min-height: 100vh;
     display: grid;
     font-size: 1.3em;
-    grid-template-columns: 100px 1fr;
-    grid-template-rows: 80px 1fr 80px;
+    /* overflow: auto; */
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 150px 1fr 80px;
     grid-template-areas: 
     "header header"
      "aside main" 
      "footer footer";
+    font-family: 'Orbitron', sans-serif;
 }
-
+p {
+    font-family: 'Raleway', sans-serif;
+}
 header {
     grid-area: header;
-    display: flex;
+    background-color: rgba(255, 255, 255, 0.548);
+    border-bottom: 1px solid black;    
+    
 }
 
 header>span {
-    width: 99px;
-    border-right: 1px solid black;
+    content: '';
+    background-color: black;
+    padding: 130px 60px;
 }
 
 header>h2 {
@@ -25,11 +33,17 @@ header>h2 {
     font-size: 2em;
     text-align: end;
     margin: 0 10px;
-    border-bottom: 1px solid black;
+}
+header>img {
+    width: 300px;
+    height: 100%;
+    float: right;
 }
 
 aside {
     grid-area: aside;
+    background-color: black;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,20 +58,33 @@ aside>span {
 
 section {
     grid-area: main;
-    margin: 30px;
-    position: relative;
-    left: -50px;
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.card {
+    display: none;
+    flex: 0.8;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.883);
     border: 1px solid black;
     box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
 }
-
-section>h3 {
+.teamCard {
+    max-width: 30%;
+    min-width: 320px;
+    height: 60%;
+}
+.card>h3 {
     border-bottom: 1px solid black;
     margin: 30px;
 }
 
-section>p {
-    margin: 30px;    
+.card>p {
+    margin: 30px;
 }
 
 footer {
@@ -65,20 +92,27 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: rgba(255, 255, 255, 0.733);
     border-top: 1px solid black;
     text-align: center;
+    text-shadow: 5px 5px 10px black;
 }
 
-#about {
-    background: blue;
+#mission {
+    background-image: url('./images/atlantic.jpg');
+    background-position: left;
+}
+
+#mission {
+
 }
 
 #team {
-    background: red;
+    background-image: url('./images/pineapple.jpg');
 }
 
 #projects {
-    background: green;
+    background-image: url('./images/interior.jpg');
 }
 
 .pointer {
@@ -87,9 +121,6 @@ footer {
 
 .blind {
     display: none;
-    width: 50%;
-    height: 70%;
-    margin: auto;
 }
 
 .drawerDiv {
@@ -98,6 +129,21 @@ footer {
 }
 
 .drawerDiv>p {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 10px 0;
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        grid-template-areas: 
+        "header header"
+        "main main"
+        "footer footer";
+    }
+    header>span {
+        display: none;
+    }
+    aside {
+        display: none;
+    }
 }
