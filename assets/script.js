@@ -3,9 +3,12 @@ $('.pointer').click(function(event) {
     $('.card').hide();                    
     event.stopPropagation();
     let target = $(event.target).attr('data-target');
-    let test = $(target).children('.card');
+    let speed = $(event.target).attr('data-speed');
+    speed = parseInt(speed);
+    speed = (!isNaN(speed)) ? speed : 500;
+    let elementList = $(target).children('.card');
     $(target).show('blind', ()=>{
-        chainIn(test, 0);
+        chainIn(elementList, 0, speed);
     });
 })
 
@@ -33,11 +36,11 @@ $(window).click(function(event) {
     }
 })
 
-function chainIn (arr, current) {
+function chainIn (arr, current, speed) {
     if(current == arr.length - 1) {
-        $(arr[current]).fadeIn(500);
+        $(arr[current]).fadeIn(speed);
     } else {
-        $(arr[current]).fadeIn(500, function(){
+        $(arr[current]).fadeIn(speed, function(){
             chainIn(arr, current + 1)
         })
     }

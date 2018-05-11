@@ -103,10 +103,6 @@ footer {
     background-position: left;
 }
 
-#mission {
-
-}
-
 #team {
     background-image: url('./images/pineapple.jpg');
 }
@@ -117,6 +113,7 @@ footer {
 
 .pointer {
     cursor: pointer;
+    padding: 10px 0;    
 }
 
 .blind {
@@ -131,6 +128,10 @@ footer {
 .drawerDiv>p {
     /* border: 1px solid black; */
     padding: 10px 0;
+}
+
+.drawerDiv>p:hover {
+    background-color: rgba(255, 255, 255, 0.24);
 }
 
 @media screen and (max-width: 450px) {
