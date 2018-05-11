@@ -3,6 +3,9 @@ body {
     min-height: 100vh;
     display: grid;
     font-size: 1.3em;
+    letter-spacing: 0.6px;
+    line-height: 1.5;
+    word-spacing: 1.4px;
     /* overflow: auto; */
     grid-template-columns: 120px 1fr;
     grid-template-rows: 150px 1fr 80px;
