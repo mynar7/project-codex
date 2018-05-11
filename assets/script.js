@@ -45,3 +45,7 @@ function chainIn (arr, current, speed) {
         })
     }
 }
+
+//info sec
+$('#jonInfo').append('<img class="theImg" src="../assets/images/mypic.jpg">' + 
+'<p style="font-size:20px;text-align: left;">' + 'I have helped establish and maintain a web presence for several local businesses.<br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque veritatis a autem qui, animi officia eligendi perspiciatis necessitatibus esse expedita ullam laboriosam placeat assumenda nisi! Doloribus deserunt id excepturi quod!');
