@@ -1,4 +1,28 @@
-$('.pointer').click(function(event) {
+let notHome;
+
+function home() {
+    $('.blind').fadeOut();
+    $('.card').hide();
+    mainIn();
+    notHome = false;
+}
+
+function chainIn (arr, current, speed) {
+    if(current == arr.length - 1) {
+        $(arr[current]).fadeIn(speed);
+    } else {
+        $(arr[current]).fadeIn(speed, function(){
+            chainIn(arr, current + 1)
+        })
+    }
+}
+
+function mainIn() {
+    $('.main, .main>.card').fadeIn();                       
+}
+
+function showSection(event) {
+    notHome = true;
     $('.blind').fadeOut();
     $('.card').hide();                    
     event.stopPropagation();
@@ -10,38 +34,49 @@ $('.pointer').click(function(event) {
     $(target).show('blind', ()=>{
         chainIn(elementList, 0, speed);
     });
-})
-
-$('.pointer').hover(
-    function() {
-        $(this).children('.drawerDiv').show('blind');
-    },
-    function() {
-        $(this).children('.drawerDiv').hide('blind');
-    }
-);
-
-$(window).click(function(event) {
-    let tagList = [];
-    let arr1 = $(event.target)
-    let tag = arr1[0].tagName.toLowerCase();
-    tagList.push(tag);
-    arr = $(event.target).parents()
-    for(i = 0; i< arr.length; i++) {
-        tagList.push(arr[i].tagName.toLowerCase());
-    }
-    if(tagList.indexOf('section') == -1) {
-        $('.blind').fadeOut();
-        $('.card').hide();                
-    }
-})
-
-function chainIn (arr, current, speed) {
-    if(current == arr.length - 1) {
-        $(arr[current]).fadeIn(speed);
-    } else {
-        $(arr[current]).fadeIn(speed, function(){
-            chainIn(arr, current + 1)
-        })
-    }
 }
+
+window.onload = function() {
+    mainIn();
+
+    $('header>button').click(function(){
+        $('#mobileMenu').slideToggle(1000);
+    });
+
+    $('.pointer').click(showSection);
+
+    $('.mobile').click(function(event){
+        let event2 = event;
+        $('#mobileMenu').fadeOut(function(){
+            showSection(event2);
+        });
+    });
+    
+
+    $('.pointer').hover(
+        function() {
+            $(this).children('.drawerDiv').show('blind');
+        },
+        function() {
+            $(this).children('.drawerDiv').hide('blind');
+        }
+    );
+
+    $(window).click(function(event) {
+        let tagList = [];
+        let arr1 = $(event.target)
+        let tag = arr1[0].tagName.toLowerCase();
+        tagList.push(tag);
+        arr = $(event.target).parents()
+        for(i = 0; i< arr.length; i++) {
+            tagList.push(arr[i].tagName.toLowerCase());
+        }
+        if(tagList.indexOf('section') == -1 &&
+            tagList.indexOf('nav') == -1 &&
+            tagList.indexOf('button') == -1 && notHome) {
+            home();
+        }
+    })
+}
+
+

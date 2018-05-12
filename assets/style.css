@@ -1,5 +1,6 @@
 body {
-    background-image: url('./images/sunset.jpg');    
+    background-image: url('./images/sunset.jpg');
+    background-attachment: fixed;    
     min-height: 100vh;
     display: grid;
     font-size: 1.3em;
@@ -22,7 +23,6 @@ header {
     grid-area: header;
     background-color: rgba(255, 255, 255, 0.548);
     border-bottom: 1px solid black;    
-    
 }
 
 header>span {
@@ -31,16 +31,37 @@ header>span {
     padding: 130px 60px;
 }
 
-header>h2 {
-    flex: 1;
+header>button {
+    position: relative;
+    z-index: 2;
+    display: none;
+    cursor: pointer;
+    margin-left: 40px;
+    margin-top: 40px;
+    color: gray;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    border: 1px solid gray;
+    font-weight: bolder;
     font-size: 2em;
-    text-align: end;
-    margin: 0 10px;
+    line-height: 10px;
 }
+button:focus {
+    outline:0;
+    background-color: rgba(255, 255, 255, 0.514);    
+}
+header>button>span {
+    position: relative;
+    bottom: 18px;
+}
+
 header>img {
     width: 300px;
     height: 100%;
     float: right;
+    cursor: pointer;
 }
 
 .team-image {
@@ -54,6 +75,9 @@ header>img {
 aside {
     grid-area: aside;
     background-color: black;
+    position: fixed;
+    width: 120px;
+    height: 100vh;
     color: white;
     display: flex;
     flex-direction: column;
@@ -62,7 +86,7 @@ aside {
 }
 
 aside>span {
-    flex: 0.15;
+    flex: 0.1;
     padding: 20px 0 20px 5px;
     margin: 20px 0;
 }
@@ -87,7 +111,6 @@ section {
 .teamCard {
     max-width: 30%;
     min-width: 320px;
-    height: 60%;
 }
 
 .teamCard>h1 {
@@ -122,10 +145,15 @@ footer {
 
 #team {
     background-image: url('./images/pineapple.jpg');
+    background-attachment: fixed;
+    align-items: flex-start;
 }
 
 #projects {
     background-image: url('./images/interior.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;    
 }
 
 .pointer {
@@ -152,8 +180,14 @@ footer {
 .drawerDiv>p:hover {
     background-color: rgba(255, 255, 255, 0.24);
 }
+nav {
+    display: none;
+    position: relative;
+    background-color: white;
+    grid-area: main;
+}
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
     body {
         grid-template-areas: 
         "header header"
@@ -162,6 +196,14 @@ footer {
     }
     header>span {
         display: none;
+    }
+    header>button {
+        display: block;
+    }
+    header>img {
+        
+        position: relative;
+        bottom: 85px;
     }
     aside {
         display: none;
