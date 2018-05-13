@@ -159,7 +159,8 @@ footer {
 #services {
     background-image: url('./images/services.jpeg');
     background-attachment: fixed;
-    align-items: flex-start;
+    background-size: cover;
+    background-position: center;
 }
 
 .pointer {
