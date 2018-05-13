@@ -1,4 +1,5 @@
 let notHome;
+let drawerOut = false;
 
 function home() {
     $('.blind').fadeOut();
@@ -41,6 +42,7 @@ window.onload = function() {
 
     $('header>button').click(function(){
         $('#mobileMenu').slideToggle(1000);
+        drawerOut = (drawerOut) ? false : true;
     });
 
     $('.pointer').click(showSection);
@@ -48,6 +50,7 @@ window.onload = function() {
     $('.mobile').click(function(event){
         let event2 = event;
         $('#mobileMenu').fadeOut(function(){
+            drawerOut = false;
             showSection(event2);
         });
     });
@@ -74,7 +77,11 @@ window.onload = function() {
         if(tagList.indexOf('section') == -1 &&
             tagList.indexOf('nav') == -1 &&
             tagList.indexOf('button') == -1 && notHome) {
-            home();
+            if(drawerOut) {
+                $('#mobileMenu').slideToggle(1000, home);
+            } else {
+                home();
+            }
         }
     })
 }

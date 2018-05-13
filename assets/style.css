@@ -54,7 +54,7 @@ button:focus {
 }
 header>button>span {
     position: relative;
-    bottom: 18px;
+    bottom: 20px;
 }
 
 header>img {
@@ -180,6 +180,7 @@ footer {
 .drawerDiv>p:hover {
     background-color: rgba(255, 255, 255, 0.24);
 }
+
 nav {
     display: none;
     position: relative;
@@ -194,16 +195,22 @@ nav {
         "main main"
         "footer footer";
     }
+    header {
+        display: flex;
+        justify-content: center;
+    }
     header>span {
         display: none;
     }
     header>button {
         display: block;
+        position: absolute;
+        left: -10px;
+        top: 0px;
     }
     header>img {
-        
-        position: relative;
-        bottom: 85px;
+        flex: 0.5;
+        float: none;
     }
     aside {
         display: none;
