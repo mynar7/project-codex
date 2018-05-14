@@ -156,6 +156,13 @@ footer {
     background-position: center;    
 }
 
+#services {
+    background-image: url('./images/services.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
 .pointer {
     cursor: pointer;
     padding: 10px 0 0 10px;    
