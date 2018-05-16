@@ -37,13 +37,15 @@ header>button {
     display: none;
     cursor: pointer;
     margin-left: 40px;
-    margin-top: 40px;
+    margin-top: 50px;
     color: gray;
+    /*
     height: 50px;
     max-width: 50px;
+    */
     background-color: rgba(255,255,255,0.1);
     border-radius: 15px;
-    border: 1px solid gray;
+    border: 2px solid gray;
     font-weight: bolder;
     font-size: 2em;
     line-height: 10px;
@@ -53,6 +55,8 @@ button:focus {
     background-color: rgba(255, 255, 255, 0.514);    
 }
 header>button>span {
+    display: flex;
+    flex-direction: column;
     position: relative;
     bottom: 20px;
 }
