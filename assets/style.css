@@ -39,10 +39,10 @@ header>button {
     margin-left: 40px;
     margin-top: 50px;
     color: gray;
-    /*
+    
     height: 50px;
-    max-width: 50px;
-    */
+    width: 50px;
+    
     background-color: rgba(255,255,255,0.1);
     border-radius: 10px;
     border: 2px solid gray;
@@ -55,8 +55,6 @@ button:focus {
     background-color: rgba(255, 255, 255, 0.514);    
 }
 header>button>span {
-    display: flex;
-    flex-direction: column;
     position: relative;
     bottom: 20px;
 }
