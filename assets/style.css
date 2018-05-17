@@ -210,7 +210,8 @@ nav {
         display: none;
     }
     header>button {
-        display: block;
+        display: flex;
+        justify-content: center;
     }
     header>img {
         flex: 0.5;
