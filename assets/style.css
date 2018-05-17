@@ -39,16 +39,15 @@ header>button {
     margin-left: 40px;
     margin-top: 50px;
     color: gray;
-    
     height: 50px;
     width: 50px;
-    
     background-color: rgba(255,255,255,0.1);
     border-radius: 10px;
     border: 2px solid gray;
     font-weight: bolder;
     font-size: 2em;
     line-height: 10px;
+    padding-right: 45px;
 }
 button:focus {
     outline:0;
