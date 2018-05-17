@@ -36,8 +36,8 @@ header>button {
     z-index: 2;
     display: none;
     cursor: pointer;
-    margin-left: 40px;
-    margin-top: 50px;
+    margin-left: 10px;
+    margin-top: 20px;
     color: gray;
     height: 50px;
     width: 50px;
