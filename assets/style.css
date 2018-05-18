@@ -8,9 +8,9 @@ body {
     line-height: 1.5;
     word-spacing: 1.4px;
     /* overflow: auto; */
-    grid-template-columns: 120px 1fr;
-    grid-template-rows: 150px 1fr 80px;
-    grid-template-areas: "header header" "aside main" "footer footer";
+    grid-template-columns: 130px 1fr;
+    grid-template-rows: 150px 1fr 60px;
+    grid-template-areas: "aside header" "aside main" "aside footer";
     font-family: 'Raleway', sans-serif;
 }
 
@@ -21,14 +21,16 @@ p {
 header {
     grid-area: header;
     background-color: rgba(255, 255, 255, 0.548);
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
 }
 
+/*
 header>span {
     content: '';
     background-color: black;
     padding: 130px 60px;
 }
+*/
 
 header>button {
     display: none;
@@ -60,7 +62,8 @@ header>button>i {
 header>img {
     width: 300px;
     height: 100%;
-    float: right;
+    margin: auto;
+    display: block;
     cursor: pointer;
 }
 
@@ -76,7 +79,7 @@ aside {
     grid-area: aside;
     background-color: black;
     position: fixed;
-    width: 120px;
+    width: 130px;
     height: 100vh;
     color: white;
     display: flex;
@@ -108,7 +111,7 @@ section {
     background-color: rgb(255, 255, 255);
     /*     background-color: rgba(255, 255, 255, 0.883); */
     /*     border: 1px solid black; */
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.7);
 }
 
 .teamCard {
@@ -133,15 +136,15 @@ section {
 footer {
     grid-area: footer;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.733);
-    border-top: 1px solid black;
-    text-align: center;
-    text-shadow: 5px 5px 10px black;
+    background-color: rgba(255, 255, 255, 0.95);
+    font-size: 0.7em;
+    
+    
 }
 
-#mission {
+#story {
     background-image: url('./images/atlantic.jpg');
     background-position: left;
 }
@@ -153,7 +156,7 @@ footer {
 }
 
 #team>.card:first-child {
-    min-width: 90%;
+    min-width: 95%;
 }
 #projects {
     background-image: url('./images/interior.jpg');
@@ -187,7 +190,7 @@ footer {
 .drawerDiv>p {
     /* border: 1px solid black; */
     padding: 10px 0 10px 10px;
-    min-width: 100%;
+    min-width: 130px;
 }
 
 .drawerDiv>p:hover {
@@ -262,10 +265,19 @@ input[type=submit]:hover {
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
+@media screen and (max-width: 950px) {
+    .col-25, .col-75 {
         width: 100%;
         margin-top: 0;
+    }
+    input[type=text], input[type=submit], textarea {
+        width: 90%;
+        margin: auto;
+        display: block;
+        float: none;
+    }
+    .card {
+        min-width: 95%;
     }
 }
 
@@ -291,4 +303,5 @@ input[type=submit]:hover {
     aside {
         display: none;
     }
+    
 }
