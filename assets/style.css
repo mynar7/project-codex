@@ -75,6 +75,12 @@ header>img {
     margin: auto;
 }
 
+.work-image {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
 aside {
     grid-area: aside;
     background-color: black;
@@ -163,6 +169,9 @@ footer {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+}
+#projects>.card:first-child {
+    min-width: 90%;
 }
 
 #services {
