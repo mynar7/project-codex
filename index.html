@@ -18,7 +18,6 @@
     <header>
 
         <!--MOBILE MENU / NAVS-->
-        <span></span>
         <button>
             <i class="fas fa-bars"></i>
         </button>
@@ -66,7 +65,7 @@
             <p>
                 <h3>What is Project Codex?</h3>
             </p>
-            <p>Project Codex is a web design company driven by pioneering problem-solvers with backgrounds across countless
+            <p>Project Codex is a web design company driven by pioneering problem-solvers with backgrounds across numerous
                 industries.
             </p>
             <p>We exist to help businesses dive into the digital space to better serve their customers. We help businesses expand
@@ -81,9 +80,9 @@
             <p>
                 <h3>Our Story:</h3>
             </p>
-            <p>Project Codex is the brainchild of UCF alumni that met while studying web development. Our small but mighty team
-                is comprised of developers that come from many different industries, each providing a unique strength and
-                perspective to what we do for our clients.</p>
+            <p>Project Codex is the brainchild of UCF alumni that met while studying web development.</p>
+            <p>Our small but mighty team is comprised of developers that come from many different industries, 
+            each providing a unique strength and perspective to what we do for our clients.</p>
         </div>
     </section>
 
@@ -120,7 +119,7 @@
         </div>
         <div class="card teamCard">
             <br>
-            <img src="http://via.placeholder.com/160x160" class="team-image" alt="Lee Profile Pic">
+            <img src="assets\images\lee.jpg" class="team-image" alt="Lee Profile Pic">
             <h1>Lee Warrick</h1>
             <p>
                 Lee is a hard-working developer that's dedicated to translating dreams and ideas to functional, attractive websites and applications.
@@ -136,9 +135,29 @@
             <p>
                 <h3>Our Work</h3>
             </p>
-            <p>The Project Codex Team provides creative solutions to meet any businesses digital needs. Not sure what you need
+            <p>The Project Codex Team provides creative solutions to meet any business's web design needs. Not sure what you need
                 exactly? No worries! We aspire to create digital footprints for our clients so they can focus on what they
                 do best, and leave the rest to us. Here are a few examples of the work we have created for our clients:</p>
+        </div>
+        <div class="card teamCard">
+            <p>
+                <h3>Websites</h3>
+            </p>
+            <p>
+                Park Finder is an app that aims to help finding florida national parks. It is fully implemented with maps, pictures and weather!
+            </p>
+            <a href="https://jondisla.github.io/parkfinder/">
+                <img src="./assets/images/parkfinder.jpg" class="work-image" alt="flick pic page">
+            </a>
+            <br>
+            <br>
+            <p>
+                West Orlando Prints is an ecommerce store for a local print shop built with Word Press.
+            </p>
+            <a href="https://westorlandoprints.com">
+                <img src="./assets/images/wop.jpg" class="work-image" alt="flick pic page">
+            </a>
+            <br>
         </div>
         <div class="card teamCard">
             <br>
@@ -172,44 +191,23 @@
             </a>
             <br>
         </div>
-        <div class="card teamCard">
-            <br>
-            <p>
-                <h3>Websites</h3>
-            </p>
-            <p>
-                Park Finder is an app that aims to help finding florida national parks. It is fully implemented with maps, pictures and weather!
-            </p>
-            <a href="https://jondisla.github.io/parkfinder/">
-                <img src="./assets/images/parkfinder.jpg" class="work-image" alt="flick pic page">
-            </a>
-            <br>
-
-            <br>
-            <p>
-                West Orlando Prints is an ecommerce store for a local print shop built with Word Press.
-            </p>
-            <a href="https://westorlandoprints.com">
-                <img src="./assets/images/wop.jpg" class="work-image" alt="flick pic page">
-            </a>
-            <br>
-        </div>
+        
     </section>
 
     <!-- SERVICES -->
     <section class='blind' id='services'>
         <div class='card'>
             <p style="text-align: center">
-                <strong>What Are Our Services?</strong>
+                Here's what we can do for you
             </p>
 
 
-            <h3>Website Design &#38 Hosting:</h3>
-            <p>We’ll design your sites with creative and fresh looks that will fit your specific business brand. We will ensure
-                users have a terrific experience when visit your site for any purpose. We will provide also take care of
+            <h3>Website Design &#38 Hosting</h3>
+            <p>We’ll design your sites with creative and fresh looks that will fit your specific business brand. We ensure
+                users have a terrific experience when visiting your site for any purpose. We are available to take care of
                 all aspects of your site, including maintenance and hosting.</p>
 
-            <h3>Digital Strategy:</h3>
+            <h3>Digital Strategy</h3>
             <p>We stay up to date on current web design trends so you can focus on your business. We can help you cultivate
                 your audience, track your online results, and create a marketing strategy if needed.</p>
         </div>
@@ -219,7 +217,7 @@
     <section class='blind' id='contact'>
         <div class="card">
             <h3>Contact Us</h3>
-            <p>Let us earn the opportunity to become an extended part of your team and create some digital magic for your business.</p>
+            <p>Let us earn the opportunity to become part of your team and create some digital magic for your business.</p>
             <form method="post" action="https://formspree.io/lee@projectcodex.biz">
                 <input type="hidden" name="_next" value="/" />
                 <input type="hidden" name="_cc" value="reinaldo@projectcodex.biz,jon@projectcodex.biz" />
@@ -228,7 +226,7 @@
                         <label for="name">Name</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="name" name="name" placeholder="John Smith">
+                        <input type="text" id="name" name="name" required="required" placeholder="John Smith">
                     </div>
                 </div>
                 <div class="row">
@@ -241,10 +239,10 @@
                 </div>
                 <div class="row">
                     <div class="col-25">
-                        <label for="email">E-mail:</label>
+                        <label for="email">E-mail</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="example@gmail.com">
+                        <input type="text" id="email" name="email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="example@gmail.com">
                     </div>
                 </div>
                 <div class="row">
@@ -252,7 +250,7 @@
                         <label for="message">Message</label>
                     </div>
                     <div class="col-75">
-                        <textarea id="subject" name="message" placeholder="Send us a message and include your a phone number where we can follow-up..."
+                        <textarea id="subject" name="message" required="required" placeholder="Send us a message and we will get back to you shortly!"
                             style="height:200px"></textarea>
                     </div>
                 </div>
