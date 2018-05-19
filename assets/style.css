@@ -172,6 +172,7 @@ footer {
 }
 #projects>.card:first-child {
     min-width: 90%;
+    align-self: flex-start;
 }
 
 #services {
