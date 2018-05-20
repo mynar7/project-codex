@@ -7,7 +7,7 @@ body {
     line-height: 1.5;
     word-spacing: 1.4px;
     grid-template-columns: 160px 1fr;
-    grid-template-rows: 150px 1fr 50px;
+    grid-template-rows: 200px 1fr 100px;
     grid-template-areas: "aside header" "aside main" "aside footer";
     font-family: 'Raleway', sans-serif;
 }
@@ -51,7 +51,7 @@ header>button>i {
 header>img {
     width: 300px;
     height: auto;
-    margin: auto;
+    margin: 20px auto 0;
     display: block;
     cursor: pointer;
 }
@@ -110,6 +110,7 @@ section {
     /* flex: 1; */
     background-size: cover;
     background-position: center;
+    margin-bottom: 70px;
 }
 
 .teamCard {
