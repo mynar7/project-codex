@@ -196,7 +196,7 @@ footer {
     min-width: 95%;
 } */
 #projects>.titleCard {
-    background-image: url('./images/ourworknew.jpeg');
+    background-image: url('./images/ourworkmain.jpeg');
 }
 #projects>.card:nth-child(2) {
     min-width: 95%;
