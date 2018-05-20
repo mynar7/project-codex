@@ -32,7 +32,7 @@ function showSection(event) {
     speed = parseInt(speed);
     speed = (!isNaN(speed)) ? speed : 500;
     let elementList = $(target).children('.card');
-    $(target).show('blind', ()=>{
+    $(target).show( ()=>{
         chainIn(elementList, 0, speed);
     });
 }
