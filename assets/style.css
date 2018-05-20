@@ -64,6 +64,26 @@ header>img {
     margin: auto;
 }
 
+div.polaroid {
+    width: 30%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.24), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 25px;
+}
+
+div.container {
+    text-align: center;
+    padding: 10px 20px
+}
+
+.service-image {
+    width: 80%;
+    height: auto;
+    border-radius: 75%;
+    display: block;
+    margin: auto;
+}
+
 .work-image {
     width: 200px;
     height: auto;
@@ -161,35 +181,34 @@ footer {
     background-image: url('./images/sunset.jpg');    
 }
 #about>.titleCard {
-    background-image: url('./images/background2.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-image: url('./images/ourwork.jpeg');
+    
 }
 #story>.titleCard {
-    background-image: url('./images/atlantic.jpg');
+    background-image: url('./images/story.jpeg');
 }
 
 #team>.titleCard {
-    background-image: url('./images/pineapple.jpg');
+    background-image: url('./images/team2.jpeg');
 }
 
 /* #team>.card:nth-child(2) {
     min-width: 95%;
 } */
 #projects>.titleCard {
-    background-image: url('./images/interior.jpg');
+    background-image: url('./images/ourworknew.jpeg');
 }
 #projects>.card:nth-child(2) {
     min-width: 95%;
 }
 
 #services>.titleCard {
-    background-image: url('./images/services.jpeg');
+    background-image: url('./images/services2.jpeg');
 }
 #contact>.titleCard {
-    background-image: url('./images/background1.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-image: url('./images/contactus.jpg');
+    background-size: cover
+  
 }
 
 .pointer {
@@ -261,12 +280,13 @@ input[type=submit]:hover {
     background-color: rgb(59, 1, 172);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-
+/*
 .container {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
 }
+*/
 
 .col-25 {
     float: left;
