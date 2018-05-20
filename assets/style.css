@@ -326,6 +326,7 @@ input[type=submit]:hover {
 
 @media screen and (max-width: 650px) {
     body {
+        grid-template-rows: 200px 1fr 100px;        
         grid-template-areas: "header header" "main main" "footer footer";
     }
     header {
@@ -342,6 +343,7 @@ input[type=submit]:hover {
     header>img {
         flex: 0.5;
         float: none;
+        width: 300px;
     }
     aside {
         display: none;
