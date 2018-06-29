@@ -116,6 +116,7 @@ section {
     justify-content: center;
     align-items: flex-start;
     padding: 0px;
+    margin-bottom: 100px;
 }
 
 .card {
@@ -322,6 +323,7 @@ input[type=submit]:hover {
 @media screen and (max-width: 1200px) {
     .teamCard {
         min-width: 44%;
+        margin-top: 100px;
     }
     .titleCard>h3 {
         font-size: 2em;
