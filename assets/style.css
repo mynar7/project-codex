@@ -132,8 +132,8 @@ section {
 
 .card {
     display: none;
-    flex: 0.5;
-    max-width: 600px;
+    /* flex: 0.5; */
+    max-width: 400px;
     /* background-color: rgb(255, 255, 255); */
     /* box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.7); */
 }
@@ -210,13 +210,13 @@ footer {
     background-image: url('./images/story.jpeg');
 }
 
-#team>.titleCard {
+#organizers>.titleCard {
     background-image: url('./images/team.jpeg');
 }
 
-/* #team>.card:nth-child(2) {
-    min-width: 95%;
-} */
+#contributing>.titleCard {
+    background-image: url('./images/interior.jpg');
+}
 
 #projects>.titleCard {
     background-image: url('./images/ourworknew.jpeg');
@@ -234,7 +234,9 @@ footer {
     background-image: url('./images/contactus.jpg');
     background-size: cover
 }
-
+#contact>.card {
+    max-width: 600px;
+}
 
 #meetup>.titleCard {
     background-image: url('./images/meetup.jpg');
@@ -359,9 +361,6 @@ input[type=submit]:hover {
         font-size: 2em;
         padding-left: 30px;
         top: 338px
-    }
-    #contact>.card {
-        min-width: 80%;
     }
 }
 
