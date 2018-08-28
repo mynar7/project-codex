@@ -6,8 +6,8 @@ body {
     letter-spacing: 0.6px;
     line-height: 1.5;
     word-spacing: 1.4px;
-    grid-template-columns: 160px 1fr;
-    grid-template-rows: 200px 1fr 100px;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 0px 1fr 100px;
     grid-template-areas: "aside header" "aside main" "aside footer";
     font-family: 'Raleway', sans-serif;
 }
@@ -17,6 +17,7 @@ p {
 }
 
 header {
+    display: none;
     grid-area: header;
     background: linear-gradient(140deg, rgba(53, 1, 136, 0.363), rgb(255, 255, 255), rgba(13, 175, 80, 0.534));
 }
@@ -25,7 +26,7 @@ header>button {
     display: none;
     position: absolute;
     right: 0px;
-    top: 63px;
+    top: 25px;
     z-index: 2;
     cursor: pointer;
     color: gray;
@@ -49,11 +50,11 @@ header>button>i {
 }
 
 header>img {
-    position: relative;
-    left: -30px;
-    width: 500px;
-    height: auto;
-    margin: 20px auto 0;
+    /* position: relative; */
+    /* left: -30px; */
+    /* width: 500px; */
+    /* height: auto; */
+    /* margin: 20px auto 0; */
     display: block;
     cursor: pointer;
 }
@@ -97,14 +98,22 @@ aside {
     grid-area: aside;
     background-color: rgb(32, 30, 30);
     position: fixed;
-    width: 160px;
+    width: 200px;
     height: 100vh;
     color: rgb(228, 228, 228);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: space-evenly; */
 }
 
+aside > img {
+    max-width: 125px;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    align-self: center;
+    cursor: pointer;
+}
 aside>span {
     flex: 0.08;
     margin: 30px 10px;
@@ -115,7 +124,7 @@ section {
     display: flex;
     overflow: auto;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
     padding: 0px;
     margin-bottom: 100px;
@@ -124,13 +133,14 @@ section {
 .card {
     display: none;
     flex: 0.5;
+    max-width: 600px;
     /* background-color: rgb(255, 255, 255); */
     /* box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.7); */
 }
 
 .titleCard {
     min-width: 100%;
-    min-height: 400px;
+    min-height: 500px;
     /* flex: 1; */
     background-size: cover;
     background-position: center;
@@ -160,7 +170,7 @@ section {
 
 .titleCard>h3 {
     position: relative;
-    top: 308px;
+    top: 408px;
     color: rgb(58, 54, 53);
     border-bottom: none;
     margin: 0 0 10px;
@@ -372,7 +382,7 @@ input[type=submit]:hover {
         float: none;
     }
     .card {
-        min-width: 95%;
+        min-width: 100%;
     }
 }
 
@@ -384,6 +394,7 @@ input[type=submit]:hover {
     header {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
     header>span {
         display: none;
@@ -393,10 +404,8 @@ input[type=submit]:hover {
         justify-content: center;
     }
     header>img {
-        flex: 0.5;
-        left: -20px;
         float: none;
-        width: 270px;
+        height: 80px;
     }
     aside {
         display: none;
@@ -412,7 +421,7 @@ input[type=submit]:hover {
     .card:last-child {
         margin-bottom: 150px;
     }
-    
+
     .titleCard>h3 {
         font-size: 1.2em;
         padding-left: 30px;
