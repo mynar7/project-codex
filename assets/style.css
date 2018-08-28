@@ -195,7 +195,7 @@ footer {
 }
 
 #main>.titleCard {
-    background-image: url('./images/card-image-1.png');
+    background-image: url('./images/welcome.png');
 }
 
 #about>.titleCard {
@@ -240,6 +240,9 @@ footer {
     background-image: url('./images/meetup.jpg');
 }
 
+#register>.titleCard {
+    background-image: url('./images/meeting.png');
+}
 
 #juniors>.titleCard {
     background-image: url('./images/juniors.jpg');
