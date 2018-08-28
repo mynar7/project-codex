@@ -182,10 +182,14 @@ footer {
 }
 
 #main>.titleCard {
-    background-image: url('./images/sunset.jpg');
+    background-image: url('./images/card-image-1.png');
 }
 
 #about>.titleCard {
+    background-image: url('./images/ourwork.jpeg');
+}
+
+#company>.titleCard {
     background-image: url('./images/ourwork.jpeg');
 }
 
@@ -215,6 +219,17 @@ footer {
 
 #contact>.titleCard {
     background-image: url('./images/contactus.jpg');
+    background-size: cover
+}
+
+
+#meetup>.titleCard {
+    background-image: url('./images/meetup.jpg');
+}
+
+
+#juniors>.titleCard {
+    background-image: url('./images/juniors.jpg');
     background-size: cover
 }
 

@@ -21,34 +21,64 @@
         <button>
             <i class="fas fa-bars"></i>
         </button>
-        <img src="./assets/images/PCLogo.svg" alt="Project Codex" id="logo">
+        <img src="./assets/images/codex.png" alt="Project Codex" id="logo">
     </header>
     <nav id="mobileMenu">
         <ul>
-            <li class="mobile" data-target="#about">About</li>
+            <!-- <li class="mobile" data-target="#about">About</li> -->
+            <li class="mobile" data-target="#company">The Company</li>
             <ul>
+                <li class="mobile" data-target="#about">About</li>
                 <li class="mobile" data-target="#story">Our Story</li>
                 <li class="mobile" data-target="#team">Our Team</li>
+                <li class="mobile" data-target="#projects">Our Work</li>
+                <li class="mobile" data-target="#services">Services</li>
             </ul>
-            <li class="mobile" data-target="#projects">Our Work</li>
-            <li class="mobile" data-target="#services">Services</li>
+            <li class="mobile" data-target="#meetup">The MeetUp</li>
+            <ul>
+                <li class="mobile" data-target="#history">History</li>
+                <li class="mobile" data-target="#organizers">Organizers</li>
+                <li class="mobile" data-target="#events">Our Events</li>
+            </ul>
+            <li class="mobile" data-target="#movement">The Movement</li>
+            <ul>
+                <li class="mobile" data-target="#juniors">Juniors</li>
+                <li class="mobile" data-target="#involved">Get Involved</li>
+            </ul>
+            <!-- <li class="mobile" data-target="#projects">Our Work</li>
+            <li class="mobile" data-target="#services">Services</li> -->
             <li class="mobile" data-target="#contact">Contact Us</li>
         </ul>
     </nav>
     <aside>
-        <span class="pointer" data-target='#about'>
-            About
+        <span class="pointer" data-target='#company'>
+            The Company
             <div class="drawerDiv">
-                <p class="pointer" data-target="#story">Our Story</p>
+                <p class="pointer" data-target="#about">About Us</p>
+                <!-- <p class="pointer" data-target="#story">Our Story</p> -->
                 <p class="pointer" data-target='#team' data-speed="300">Our Team</p>
+                <p class="pointer" data-target="#projects">Our Work</p>
+                <p class="pointer" data-target="#services">Services</p>
             </div>
         </span>
-        <span class="pointer" data-target='#projects'>
-            Our Work
+        <span class="pointer" data-target='#meetup'>
+            The MeetUp
+            <div class="drawerDiv">
+                    <p class="pointer" data-target="#history">History</p>
+                    <p class="pointer" data-target="#organizers">Organizers</p>
+                    <p class="pointer" data-target="#events">Our Events</p>
+            </div>
         </span>
-        <span class="pointer" data-target='#services'>Services</span>
+        <span class="pointer" data-target='#services'>
+            The Movement
+            <div class="drawerDiv">
+                    <p class="pointer" data-target="#juniors">Juniors</p>
+                    <p class="pointer" data-target="#involved">Get Involved</p>
+            </div>
+        </span>
         <span class="pointer" data-target="#contact">Contact Us</span>
     </aside>
+
     <!--WELCOME-->
     <section class="main" id="main">
         <div class="titleCard card">
@@ -57,12 +87,13 @@
         <div class="card">
             <p>Thank you for checking out our business page!</p>
             <p>Browse our site and learn more about us, our team, the work we have done for our clients, and what we can do
-                for you.</p>
+                for you.</p>   
+            <p>Also, find out more about our meetups for junior developers, and our efforts in a movement to help turn Orlando into the next Tech Hub.  </p>
         </div>
     </section>
 
-    <!--ABOUT-->
-    <section class='blind' id='about'>
+    <!--THE COMPANY-->
+    <section class='blind' id='company'>
         <div class="titleCard card"></div>
         <div class="card">
             <p>
@@ -70,7 +101,8 @@
             </p>
             <p>Project Codex is a web design company driven by pioneering problem-solvers with backgrounds across numerous industries.
             </p>
-            <p>We exist to help businesses dive into the digital space to better serve their customers. We help businesses expand
+            </p>
+            <p>The Company exist to help businesses dive into the digital space to better serve their customers. We help businesses expand
                 their digital footprint by creating attractive and functional websites that help drive consumer engagement.</p>
 
         </div>
@@ -82,7 +114,7 @@
             <h3>Our Story:</h3>
         </div>
         <div class="card">
-            <p>Project Codex is the brainchild of UCF alumni that met while studying web development.</p>
+            <p>Project Codex began as the brainchild of UCF alumni that met while studying web development.</p>
             <p>Our small but mighty team is comprised of developers that come from many different industries, each providing
                 a unique strength and perspective to what we do for our clients.</p>
         </div>
@@ -208,6 +240,37 @@
                 your audience, track your online results, and create a marketing strategy if needed.</p>
         </div>
     </section>
+
+    
+    <!-- MEETUP-->
+    <section class='blind' id='meetup'>
+            <div class="titleCard card">
+                <h3>Project Code Experience </h3>
+            </div>
+            <div class='card'>
+                    <h3>Hosting Monthly MeetUps</h3>
+                    <p>We connect junior developers with senior developers for mentoring opportunities in order to guide their job search or career development.</p>
+                </div>
+            <div class='card'>
+                <h3>Open Source Projects</h3>
+                <p>Juniors are invited to participate in our Open Source coding projects to continue to develop their coding skills, teamwork skills, and work on large and small code-based projects to faciliate learning.</p>
+            </div>       
+        </section>
+
+    <!-- JUNIORS -->
+    <section class='blind' id='juniors'>
+            <div class="titleCard card">
+                <h3>Guiding junior developers </h3>
+            </div>
+            <div class='card'>
+                    <h3>Mentoring</h3>
+                    <p>We connect junior developers with senior developers for mentoring opportunities in order to guide their job search or career development.</p>
+                </div>
+            <div class='card'>
+                <h3>Open Source Projects</h3>
+                <p>Juniors are invited to participate in our Open Source coding projects to continue to develop their coding skills, teamwork skills, and work on large and small code-based projects to faciliate learning.</p>
+            </div>
+        </section>
 
     <!--CONTACT US-->
     <section class='blind' id='contact'>
