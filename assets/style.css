@@ -153,7 +153,13 @@ section {
     flex: 0.3;
 }
 
-.teamCard>h1 {
+.teamCard2 {
+    max-width: 60%;
+    min-width: 320px;
+}
+
+
+.teamCard, .teamCard2>h1 {
     text-align: center;
     margin: 5px 0 0 0;
     font-size: 1.2em;
@@ -198,7 +204,7 @@ footer {
     background-image: url('./images/welcome.png');
 }
 
-#about>.titleCard {
+/* #about>.titleCard {
     background-image: url('./images/ourwork.jpeg');
 }
 
@@ -208,6 +214,10 @@ footer {
 
 #story>.titleCard {
     background-image: url('./images/story.jpeg');
+} */
+
+#events>.titleCard {
+    background-image: url('./images/events.jpg')
 }
 
 #organizers>.titleCard {
@@ -222,9 +232,9 @@ footer {
     background-image: url('./images/ourworknew.jpeg');
 }
 
-#projects>.card:nth-child(2) {
+/* #projects>.card:nth-child(2) {
     min-width: 95%;
-}
+} */
 
 #services>.titleCard {
     background-image: url('./images/services2.jpeg');
