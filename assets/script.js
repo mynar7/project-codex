@@ -111,7 +111,7 @@ $.ajax({
         let paragraph = $('<p>')
         //loop through response.data
         response.data.forEach(element => {
-            // console.log('element: ', element)
+            console.log('element: ', element)
 
             //list ongoing events
             if (element.status === 'active' || element.status === 'upcoming') {
@@ -121,13 +121,28 @@ $.ajax({
                 let street = element.venue.address_1;
                 let city = element.venue.city;
                 let state = element.venue.state;
+
+                //date
                 let dateAry = element.local_date.split('-'); //split date by '-'
                 let date = '<strong>WHEN: </strong>' + ' ' + months[parseInt(dateAry[1] - 1)] + ' ' + dateAry[2] + ', ' + dateAry[0]
+
+                //time
+                let time = element.local_time.split(':')
+                let hour = parseInt(time[0]);
+                let min = time[1]
+                if (hour > 12) {
+                    hour -= 12;
+                    time = 'TIME: '+hour + ':' + min + ' PM'
+                } else {
+                    time = 'TIME: '+hour + ':' + min + ' AM'
+                }
+
+                //address
                 let addr = '<strong>WHERE: </strong>' + ' ' + street + ', ' + city + ', ' + state;
                 let seatsLeft = '<b>SEATS LEFT: </b>' + (element.rsvp_limit - element.yes_rsvp_count)
 
 
-                let body = [date, addr, seatsLeft];
+                let body = [date, time,addr, seatsLeft];
                 createEventCard(ary, element.name, element.link, body).appendTo('.main') //get results and append them
             } else {
                 // ?fill in
@@ -149,7 +164,7 @@ function createEventCard(classes, title, url, body) {
     let localList = $('<ul>'); //list element
     let div = $('<div>').addClass(localClasses);
 
-    let header = $('<a>').attr('href', url).attr('target','_blank'); // header link
+    let header = $('<a>').attr('href', url).attr('target', '_blank'); // header link
     $('<h3>').text(title).appendTo(header); //header
     header.appendTo(div); //add to div
     body.forEach(element => { //form list from array
