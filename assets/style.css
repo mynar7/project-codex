@@ -138,6 +138,11 @@ section {
     /* box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.7); */
 }
 
+.event{
+    /* override inherit so formatting show */
+    font-weight: unset !important;
+}
+
 .titleCard {
     min-width: 100%;
     min-height: 500px;
