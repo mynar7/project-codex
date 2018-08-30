@@ -92,11 +92,7 @@ window.onload = function () {
 
 
 }
-// jQuery.ajaxPrefilter(function(options) {
-//     if (options.crossDomain && jQuery.support.cors) {
-//         options.url = 'http://cors-anywhere.herokuapp.com/' + options.url;
-//     }
-// });
+
 
 // let cors = 'http://cors-anywhere.herokuapp.com/'
 $.ajax({

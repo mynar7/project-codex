@@ -1,6 +1,8 @@
 # jQuery config for intellisense
 jsconfig.json
 # dump files
+
+.DS_Store
 *dump* 
 # folders
 .vscode
