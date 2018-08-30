@@ -159,7 +159,7 @@ section {
 }
 
 
-.teamCard>h1, /*.teamCard2>h1*/ {
+.teamCard>h1 {
     text-align: center;
     margin: 5px 0 0 0;
     font-size: 1.2em;
