@@ -111,7 +111,7 @@ $.ajax({
             if (element.status === 'active' || element.status === 'upcoming') {
                 let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
                 //format bits
-                const ary = ['card', 'event']
+                const ary = ['card', 'teamCard2']
                 let street = element.venue.address_1;
                 let city = element.venue.city;
                 let state = element.venue.state;
