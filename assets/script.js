@@ -100,9 +100,7 @@ $.ajax({
     type: 'GET',
     dataType: 'JSONP', //CORS workaround
     success: function (response) {
-        console.log(response)
-
-
+        // console.log(response)
         let header = $('<h3>');
         let paragraph = $('<p>')
         //loop through response.data
@@ -137,9 +135,10 @@ $.ajax({
                 let addr = '<strong>WHERE: </strong>' + ' ' + street + ', ' + city + ', ' + state;
                 let seatsLeft = '<b>SEATS LEFT: </b>' + (element.rsvp_limit - element.yes_rsvp_count)
 
-
-                let body = [date, time,addr, seatsLeft];
+                let body = [date, time, addr];
+                if(element.rsvp_limit) body.push(seatsLeft);
                 createEventCard(ary, element.name, element.link, body).appendTo('.main') //get results and append them
+                createEventCard(ary, element.name, element.link, body).appendTo('.events') //get results and append them
             } else {
                 // ?fill in
             }
@@ -160,8 +159,9 @@ function createEventCard(classes, title, url, body) {
     let localList = $('<ul>'); //list element
     let div = $('<div>').addClass(localClasses);
 
-    let header = $('<a>').attr('href', url).attr('target', '_blank'); // header link
-    $('<h3>').text(title).appendTo(header); //header
+    let header = $('<h3>'); // header link
+
+    $('<a>').attr('href', url).attr('target', '_blank').text(title).appendTo(header); //header
     header.appendTo(div); //add to div
     body.forEach(element => { //form list from array
         $('<li>').html(element).appendTo(localList);
